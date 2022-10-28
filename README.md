@@ -25,7 +25,9 @@ Once you have a VCS connection configured traverse to the `./modules/bootstrap` 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | 0.38.0 |
 
 ## Providers
 
