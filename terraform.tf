@@ -10,3 +10,11 @@ terraform {
 provider "tfe" {
   # Configuration options
 }
+resource "tfe_organization_token" "this" {
+  organization = "my-org-name"
+}
+provider "tfe" {
+  # Configuration options
+  token = tfe_organization_token.this
+  alias = "organization"
+}
