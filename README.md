@@ -26,7 +26,7 @@ One you have completed the [bootstrapping](./README.md#bootstrapping) this proje
 
 This project is to facilitate a demonstration of terraform service capabilities allowing for rapid deployment and removal of the resources.
 
-
+The examples follow the learnings from <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices>
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

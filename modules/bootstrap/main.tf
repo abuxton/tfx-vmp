@@ -1,4 +1,4 @@
-data "tfe_oauth_client" "clients" {
+data "tfe_oauth_client" "this" {
   name         = var.oauth_name
   organization = var.organization
 }
@@ -11,6 +11,6 @@ resource "tfe_workspace" "this" {
   tag_names      = ["bootstrap", "vmp"]
   vcs_repo {
     identifier     = var.vcs_repo_identifier
-    oauth_token_id = data.tfe_oauth_client.clients.oauth_token_id
+    oauth_token_id = data.tfe_oauth_client.this.oauth_token_id
   }
 }
