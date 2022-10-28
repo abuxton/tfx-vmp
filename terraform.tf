@@ -12,7 +12,7 @@ provider "tfe" {
 }
 
 provider "tfe" {
-  alias = organization
+  alias = "organization"
   token = var.TFx_org_token
 
 }
