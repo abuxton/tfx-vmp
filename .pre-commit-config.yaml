@@ -1,0 +1,71 @@
+# SKIP=<id> <id> git commit -m "foo"
+# git commit -m "bar" --no-verify #skip all
+repos:
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.17 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    hooks:
+      - id: terraform-fmt
+      - id: terraform-validate
+      - id: tflint
+#      - id: shellcheck
+#      - id: gofmt
+#      - id: golint
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-docstring-first
+      - id: check-json
+      - id: check-added-large-files
+      - id: check-yaml
+      - id: pretty-format-json
+#      - id: detect-aws-credentials
+#      - id: detect-private-key
+#  - repo: https://github.com/antonbabenko/pre-commit-terraform
+#    rev: v1.74.2 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+#    hooks:
+#       - id: terraform_tfsec
+#      - id: terraform_docs
+  - repo: https://github.com/syntaqx/git-hooks
+    rev: v0.0.17
+    hooks:
+#       - id: circleci-config-validate
+      - id: forbid-binary
+        exclude: |
+            (?x)^(
+                favicon.ico |
+                images/.*\.(jpg$|png$) |
+                deploy/img/.*\.(jpg$|png$) |
+                deployment/assets/.*\.(jpg$|png$) |
+                assets/images/.*\.(jpg$|png$)
+            )$
+
+#      - id: go-fmt
+#      - id: go-test
+#      - id: go-mod-tidy
+#      - id: go-generate
+      # - id: shellcheck
+      # - id: shfmt
+#  - repo: git://github.com/markdownlint/markdownlint
+#    rev: v0.11.0 # Get the latest from: https://github.com/markdownlint/markdownlint
+#    hooks:
+#      - id: markdownlint
+#        files: \.(md|mdown|markdown)$
+#  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+#    rev: v1.1.2
+#    hooks:
+#      - id: htmlhint
+#        # optional custom config:
+#        args: [--config, .htmlhintrc]
+#      - id: htmllint
+#      - id: markdown-toc
+#        # optional custom config:
+#        args: [--indent, "    ", -i]
+#      - id: dockerfile_lint
+#        # optional custom config:
+#        args: [--json, --verbose, --dockerfile]
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: ""
+    hooks:
+      - id: markdown-link-check

@@ -1,0 +1,13 @@
+{
+    "attr-bans": [],
+    "attr-no-dup": true,
+    "attr-no-unsafe-char": true,
+    "attr-quote-style": "quoted",
+    "doctype-first": false,
+    "id-class-style": false,
+    "indent-style": "spaces",
+    "indent-width": 0,
+    "tag-bans": [],
+    "tag-name-lowercase": true,
+    "tag-name-match": true
+}
