@@ -21,7 +21,7 @@ resource "tfe_variable" "tfe_token" {
 
 resource "tfe_variable" "tfx_org_token" {
   key      = "TFx_org_token"
-  value    = tfe_team_token.this.token
+  value    = tfe_organization_token.this.token
   category = "terraform"
   #sensitive       = true
   description     = "TFx Organization token for team management"
