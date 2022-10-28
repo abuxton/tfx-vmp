@@ -25,7 +25,6 @@ terraform apply "vmp-bootstrap.tfplan"
 terraform output vmp_bootstap_workspace_url
 "https://app.terraform.io/app/example/workspaces/vm_workspace"
 
-
 ```
 
 
@@ -50,7 +49,13 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_team.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
+| [tfe_team_access.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
+| [tfe_team_token.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_token) | resource |
+| [tfe_variable.tfe_token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
+| [tfe_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable_set) | resource |
 | [tfe_workspace.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
+| [tfe_workspace_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace_variable_set) | resource |
 | [tfe_oauth_client.clients](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
 
 ## Inputs
