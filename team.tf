@@ -6,7 +6,6 @@ resource "tfe_team" "component-env" {
   #   manage_workspaces = true
   #   manage_policies   = true
   # }
-  provider = tfe.organization
 }
 resource "tfe_team_access" "component-env" {
   access       = "read"
