@@ -1,4 +1,5 @@
 # tfc-vmp
+
 It's assumed you have access to a Terraform service platform such as Terraform Enterprise (TFE) or Terraform Cloud(TFC).
 
 Vending Machine Pattern (VMP) for creating an organisation, workspaces, and teams on a Terraform service platform (TFC/TFE)
@@ -11,7 +12,7 @@ Access to the TFC || TFE platform with an organization <https://developer.hashic
 
 The terraform client installed locally <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>
 
-## Bootstrapping
+### Bootstrapping
 
 Before you can connect a Version Control Service (VCS) based workflow you need a VCS connection in TFC/TFE. <https://developer.hashicorp.com/terraform/enterprise/vcs>
 
@@ -19,7 +20,11 @@ You may or may not need SSH keys (optional)<https://developer.hashicorp.com/terr
 
 Once you have a VCS connection configured traverse to the `./modules/bootstrap` folder and read the [README.md](./modules/bootstrap/README.md) there.
 
+## Usage
 
+One you have completed the [bootstrapping](./README.md#bootstrapping) this project provides resources to then build workspaces, policy_sets and further team access.
+
+This project is to facilitate a demonstration of terraform service capabilities allowing for rapid deployment and removal of the resources.
 
 
 <!-- BEGIN_TF_DOCS -->
