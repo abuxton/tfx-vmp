@@ -22,6 +22,9 @@ Once you have a VCS connection do the following;
 ```
 cd ./modules/bootstrap
 # suggest you review the code
+# update terraform.auto.tfvars.example
+# rename to terraform.auto.tfvars.example to terraform.auto.tfvars
 terraform init
-terraform apply
+terraform plan -out=bootstrap.plan
+
 ```
