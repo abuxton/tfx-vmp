@@ -18,8 +18,8 @@ resource "tfe_variable" "tfe_token" {
   description     = "TFE token for deploying tfe provider resources"
   variable_set_id = tfe_variable_set.this.id
 }
-resource "tfe_variable" "oath_name" {
-  key      = "oath_name"
+resource "tfe_variable" "oauth_name" {
+  key      = "oauth_name"
   value    = var.oauth_name
   category = "terraform"
   #sensitive       = true
