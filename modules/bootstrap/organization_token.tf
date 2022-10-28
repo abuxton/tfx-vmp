@@ -1,3 +1,3 @@
-# resource "tfe_organization_token" "test" {
-#   organization = var.organization
-# }
+resource "tfe_organization_token" "this" {
+  organization = var.organization
+}

@@ -11,4 +11,9 @@ provider "tfe" {
   # Configuration options
 }
 
+provider "tfe" {
+  alias = organization
+  token = var.TFx_org_token
+
+}
 
