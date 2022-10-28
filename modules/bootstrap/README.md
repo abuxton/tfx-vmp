@@ -9,7 +9,7 @@ The modules pre-requisites are outlined in the main project [README.md](../../RE
 ## Usage
 
 * We suggest you review the code in this folder.
-* update terraform.auto.tfvars.example with your values
+* update `terraform.auto.tfvars.example` with your values
 * For ease of use rename to `terraform.auto.tfvars.example` to `terraform.auto.tfvars`
 
 **Note: the `*.tfvars` are exluded by way of .gitignore from version control.**
@@ -21,12 +21,15 @@ run terraform plan and review the intended plan correct any errors
 terraform plan -out=vmp-bootstrap.tfplan
 terraform apply "vmp-bootstrap.tfplan"
 # review the outputs
+terraform state list
+terraform output
 # navigate to the vmp_bootstrap_workspace_url in your browser
 terraform output vmp_bootstap_workspace_url
 "https://app.terraform.io/app/example/workspaces/vm_workspace"
 
 ```
 
+You will see the resources as documented below are created and you can review these in the tfe provider <https://registry.terraform.io/providers/hashicorp/tfe/latest> documentation.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
