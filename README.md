@@ -17,22 +17,33 @@ Before you can connect a Version Control Service (VCS) based workflow you need a
 
 You may or may not need SSH keys (optional)<https://developer.hashicorp.com/terraform/enterprise/vcs/github#step-4-on-terraform-cloud-set-up-ssh-keypair-optional>
 
-Once you have a VCS connection do the following;
-
-```
-cd ./modules/bootstrap
-# suggest you review the code
-# update terraform.auto.tfvars.example
-# rename to terraform.auto.tfvars.example to terraform.auto.tfvars
-terraform init
-run terraform plan and review the intended plan correct any errors
-# now run the following
-terraform plan -out=vmp-bootstrap.tfplan
-terraform apply "vmp-bootstrap.tfplan"
-# review the outputs
-# navigate to the vmp_bootstrap_workspace_url in your browser
-terraform output vmp_bootstap_workspace_url
-"https://app.terraform.io/app/example/workspaces/vm_workspace"
+Once you have a VCS connection configured traverse to the `./modules/bootstrap` folder and read the [README.md](./modules/bootstrap/README.md) there.
 
 
-```
+
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
