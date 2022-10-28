@@ -2,6 +2,33 @@
 
 This module is stand alone and intended to be executed with the terraform client to bootstrap the vmp workspace to manage all other resources for a organization.
 
+## Pre-requisites
+
+The modules pre-requisites are outlined in the main project [README.md](../../README.md)
+
+## Usage
+
+* We suggest you review the code in this folder.
+* update terraform.auto.tfvars.example with your values
+* For ease of use rename to `terraform.auto.tfvars.example` to `terraform.auto.tfvars`
+
+**Note: the `*.tfvars` are exluded by way of .gitignore from version control.**
+
+```
+terraform init
+run terraform plan and review the intended plan correct any errors
+# now run the following
+terraform plan -out=vmp-bootstrap.tfplan
+terraform apply "vmp-bootstrap.tfplan"
+# review the outputs
+# navigate to the vmp_bootstrap_workspace_url in your browser
+terraform output vmp_bootstap_workspace_url
+"https://app.terraform.io/app/example/workspaces/vm_workspace"
+
+
+```
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
