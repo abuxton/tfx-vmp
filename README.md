@@ -1,2 +1,27 @@
-# tfc-vdm
-vending machine pattern for creating an organisation, workspaces, and teams in terraform service platform (tfc/tfe))
+# tfc-vmp
+It's assumed you have access to a Terraform service platform such as Terraform Enterprise (TFE) or Terraform Cloud(TFC).
+
+Vending Machine Pattern (VMP) for creating an organisation, workspaces, and teams on a Terraform service platform (TFC/TFE)
+
+This Terraform root module is based on the concepts of Crawl -> Walk -> Run, so it also includes steps to bootstrap this repo into the initial workspace in your organization.
+
+## Requirements
+
+Access to the TFC || TFE platform with an organization <https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/organizations> and a user token <https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/users#api-tokens>
+
+The terraform client installed locally <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>
+
+## Bootstrapping
+
+Before you can connect a Version Control Service (VCS) based workflow you need a VCS connection in TFC/TFE. <https://developer.hashicorp.com/terraform/enterprise/vcs>
+
+You may or may not need SSH keys (optional)<https://developer.hashicorp.com/terraform/enterprise/vcs/github#step-4-on-terraform-cloud-set-up-ssh-keypair-optional>
+
+Once you have a VCS connection do the following;
+
+```
+cd ./modules/bootstrap
+# suggest you review the code
+terraform init
+terraform apply
+```
