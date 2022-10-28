@@ -15,6 +15,6 @@ resource "tfe_organization_token" "this" {
 }
 provider "tfe" {
   # Configuration options
-  token = tfe_organization_token.this
+  token = tfe_organization_token.this.token
   alias = "organization"
 }
