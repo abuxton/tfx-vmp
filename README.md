@@ -25,6 +25,14 @@ cd ./modules/bootstrap
 # update terraform.auto.tfvars.example
 # rename to terraform.auto.tfvars.example to terraform.auto.tfvars
 terraform init
-terraform plan -out=bootstrap.plan
+run terraform plan and review the intended plan correct any errors
+# now run the following
+terraform plan -out=vmp-bootstrap.tfplan
+terraform apply "vmp-bootstrap.tfplan"
+# review the outputs
+# navigate to the vmp_bootstrap_workspace_url in your browser
+terraform output vmp_bootstap_workspace_url
+"https://app.terraform.io/app/example/workspaces/vm_workspace"
+
 
 ```

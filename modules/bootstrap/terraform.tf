@@ -9,4 +9,5 @@ terraform {
 
 provider "tfe" {
   # Configuration options
+  hostname = var.terraform_server
 }
