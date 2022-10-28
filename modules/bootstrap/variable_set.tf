@@ -18,3 +18,10 @@ resource "tfe_variable" "tfe_token" {
   description     = "TFE token for deploying tfe provider resources"
   variable_set_id = tfe_variable_set.this.id
 }
+resource "tfe_variable" "organization" {
+  key      = "organization"
+  value    = var.organization
+  category = "terraform"
+  #sensitive       = true
+  description     = "self referential organization name"
+  variable_set_id = tfe_variable_set.this.id
