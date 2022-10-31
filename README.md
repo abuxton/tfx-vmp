@@ -12,6 +12,8 @@ Access to the TFC || TFE platform with an organization <https://developer.hashic
 
 The terraform client installed locally <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>
 
+A git fork or clone of this repository in a publicly source-able project.
+
 ### Bootstrapping
 
 Before you can connect a Version Control Service (VCS) based workflow you need a VCS connection in TFC/TFE. <https://developer.hashicorp.com/terraform/enterprise/vcs>
@@ -28,7 +30,19 @@ This project is to facilitate a demonstration of terraform service capabilities 
 
 The examples follow the learnings from <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices>
 
-# Destroy and Destruction
+### Policy Sets (Sentinel) Deployment
+
+The example includes dynamic resources for deploying `policy_set` resources.
+
+The variable `configure_policy_set` will deploy the initial generic policy set <./policy_sets/generic/sentinel.hcl>
+
+Additionally configuring `sentinel_vcs_repo_identifier=<git organization>/<git project>` or `sentinel_vcs_repo_identifier = $(git config  --get remote.origin.url | cut -d : -f2 | cut -d'.' -f1)` will then deploy the <./policy_sets/module_validation/sentinel.hcl> from this repository has source.
+
+These variable should be set in the Terraform service UI (TFC/TFE) <https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables/managing-variables>
+
+**NOTE: The policies referenced are only available over a pubic HTTPS endpoint**
+
+## Destroy and Destruction
 
 The resources listed below are created as part of a standard Version Control Service (VCS) driven workflow during the bootstrapping process.
 
