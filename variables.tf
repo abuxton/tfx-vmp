@@ -30,3 +30,8 @@ variable "sentinel_branch" {
   type    = string
   default = "main"
 }
+
+variable "configure_policy_set" {
+  default = false
+  type    = bool
+}

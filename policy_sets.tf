@@ -1,13 +1,16 @@
-data "tfe_slug" "generic" {
-  // point to the local directory where the policies are located.
-  source_path = "policy_sets/generic"
-}
 data "tfe_oauth_client" "this" {
   name         = var.oauth_name
   organization = local.organization
   provider     = tfe.organization
 }
+data "tfe_slug" "generic" {
+  count = var.configure_policy_set != false ? 1 : 0
+  // point to the local directory where the policies are located.
+  source_path = "policy_sets/generic"
+}
+
 resource "tfe_policy_set" "generic" {
+  count        = var.configure_policy_set != false ? 1 : 0
   name         = "vmp_generic"
   description  = "a generic policy"
   organization = local.organization
@@ -18,7 +21,7 @@ resource "tfe_policy_set" "generic" {
 }
 
 resource "tfe_policy_set" "vmp_vcs_module_validation" {
-  count = var.sentinel_vcs_repo_identifier != "" ? 1 : 0
+  count = var.configure_policy_set != false && var.sentinel_vcs_repo_identifier != "" ? 1 : 0
 
   name         = "vmp_initial_policy_set"
   description  = "A vmp pattern deployed policy set"

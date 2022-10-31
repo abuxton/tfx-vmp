@@ -73,6 +73,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (optional) Token for the Terraform server organization level token | `string` | n/a | yes |
+| <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | n/a | `bool` | `false` | no |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required) Name of OAuth VCS connection you created | `string` | n/a | yes |
 | <a name="input_sentinel_branch"></a> [sentinel\_branch](#input\_sentinel\_branch) | n/a | `string` | `"main"` | no |
 | <a name="input_sentinel_vcs_repo_identifier"></a> [sentinel\_vcs\_repo\_identifier](#input\_sentinel\_vcs\_repo\_identifier) | (Required) username/projectname of the VCS project or repository | `string` | `""` | no |
