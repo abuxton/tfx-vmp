@@ -12,5 +12,6 @@ resource "tfe_workspace" "this" {
   vcs_repo {
     identifier     = var.vcs_repo_identifier
     oauth_token_id = data.tfe_oauth_client.this.oauth_token_id
+    branch         = var.branch
   }
 }

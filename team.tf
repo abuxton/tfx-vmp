@@ -1,6 +1,6 @@
 resource "tfe_team" "component-env" {
   name         = "component-env"
-  organization = local.organization["0"]
+  organization = local.organization
   visibility   = "organization"
   # organization_access {
   #   manage_workspaces = true
