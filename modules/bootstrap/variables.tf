@@ -20,4 +20,19 @@ variable "branch" {
   default     = "main"
   description = "(Optional String) Branch to deploy VCS source."
 }
+variable "sentinel_branch" {
+  type        = string
+  default     = ""
+  description = "(Optional String) Branch to deploy VCS sourced policy_set."
+}
+variable "configure_policy_set" {
+  default     = false
+  type        = bool
+  description = "(Optional Bool) Flag to control deployment of policy sets."
+}
 
+variable "sentinel_vcs_repo_identifier" {
+  type        = string
+  description = "(Optional String) username/projectname of the VCS project or repository to source policy sets"
+  default     = "" # used as count flag
+}
