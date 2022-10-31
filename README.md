@@ -27,6 +27,16 @@ One you have completed the [bootstrapping](./README.md#bootstrapping) this proje
 This project is to facilitate a demonstration of terraform service capabilities allowing for rapid deployment and removal of the resources.
 
 The examples follow the learnings from <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices>
+
+# Destroy and Destruction
+
+The resources listed below are created as part of a standard Version Control Service (VCS) driven workflow during the bootstrapping process.
+
+To destroy the resources you will require sufficient access to the created workspace `vmp_workspace`. Follow the documentation <https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-destroy?in=terraform%2Fcloud-get-started>
+
+Once the resources are destroyed you can run a Terraform client based destroy using the [bootstrap](./modules/bootstrap) folder, or simply remove the workspace.
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

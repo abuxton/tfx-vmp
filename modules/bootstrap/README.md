@@ -12,7 +12,7 @@ The modules pre-requisites are outlined in the main project [README.md](../../RE
 * update `terraform.auto.tfvars.example` with your values
 * For ease of use rename to `terraform.auto.tfvars.example` to `terraform.auto.tfvars`
 
-**Note: the `*.tfvars` are exluded by way of .gitignore from version control.**
+**Note: the `*.tfvars` are excluded by way of .gitignore from version control.**
 
 ```
 terraform init
@@ -30,6 +30,27 @@ terraform output vmp_bootstap_workspace_url
 ```
 
 You will see the resources as documented below are created and you can review these in the tfe provider <https://registry.terraform.io/providers/hashicorp/tfe/latest> documentation.
+
+### Destroy and Destruction
+
+To destroy the resources created by the bootstrap root module. First ensure you have destroyed or are at least aware of the resources being created by the resource `tfe_workspace.this`.
+
+``` json
+
+ # tfe_workspace.this will be created
+  + resource "tfe_workspace" "this" {
+...
+      + name                          = "vmp_workspace"
+      + operations                    = (known after apply)
+      + organization                  = (known after apply)
+... #truncated
+
+```
+
+To destroy the resources created see the destroy and destruction section of the [root module README.md](../../README.md#destroy-and-destruction)
+
+To `destroy` or `taint` individual resources (used to refresh tokens for example) see <https://developer.hashicorp.com/terraform/cli/commands/taint>
+
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
