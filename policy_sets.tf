@@ -6,7 +6,7 @@ data "tfe_oauth_client" "this" {
 data "tfe_slug" "generic" {
   count = var.configure_policy_set != false ? 1 : 0
   // point to the local directory where the policies are located.
-  source_path = "./policy_sets/generic"
+  source_path = "policy_sets/generic"
 }
 
 resource "tfe_policy_set" "generic" {
@@ -17,7 +17,7 @@ resource "tfe_policy_set" "generic" {
   global       = true
 
   // reference the tfe_slug data source.
-  slug = data.tfe_slug.generic
+  slug = data.tfe_slug.generic["0"]
 }
 
 resource "tfe_policy_set" "vmp_vcs_module_validation" {
