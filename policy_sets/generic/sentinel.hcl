@@ -1,6 +1,6 @@
 # taken from https://github.com/hashicorp/terraform-sentinel-policies/blob/main/cloud-agnostic/http-examples/sentinel.hcl
 module "tfconfig-functions" {
-    source = "https://github.com/hashicorp/terraform-sentinel-policies/blob/maincommon-functions/tfconfig-functions/tfconfig-functions.sentinel"
+    source = "https://github.com/hashicorp/terraform-sentinel-policies/blob/main/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 }
 
 module "registry-functions" {
