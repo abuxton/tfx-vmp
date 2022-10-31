@@ -36,7 +36,7 @@ The example includes dynamic resources for deploying `policy_set` resources.
 
 The variable `configure_policy_set` will deploy the initial generic policy set <./policy_sets/generic/sentinel.hcl>
 
-Additionally configuring `sentinel_vcs_repo_identifier=<git organization>/<git project>` or `sentinel_vcs_repo_identifier = $(git config  --get remote.origin.url | cut -d : -f2 | cut -d'.' -f1)` will then deploy the <./policy_sets/module_validation/sentinel.hcl> from this repository has source.
+Additionally configuring `sentinel_vcs_repo_identifier=<git organization>/<git project>` or `sentinel_vcs_repo_identifier = $(git config  --get remote.origin.url | cut -d : -f2 | cut -d'.' -f1)` will then deploy the <./policy_sets/storage_validation/sentinel.hcl> from this repository has source.
 
 These variable should be set in the Terraform service UI (TFC/TFE) <https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables/managing-variables>
 
