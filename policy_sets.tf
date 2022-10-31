@@ -20,13 +20,14 @@ resource "tfe_policy_set" "generic" {
   slug = data.tfe_slug.generic["0"]
 }
 
-resource "tfe_policy_set" "vmp_vcs_module_validation" {
+resource "tfe_policy_set" "vmp_vcs_storage_validation" {
   count = var.configure_policy_set != false && var.sentinel_vcs_repo_identifier != "" ? 1 : 0
 
-  name         = "vmp_initial_policy_set"
-  description  = "A vmp pattern deployed policy set"
-  organization = local.organization
-  global       = true
+  name          = "vmp_initial_policy_set"
+  description   = "A vmp pattern deployed policy set"
+  organization  = local.organization
+  global        = true
+  policies_path = "./policy_sets/storage_validation"
 
   vcs_repo {
     identifier         = var.sentinel_vcs_repo_identifier

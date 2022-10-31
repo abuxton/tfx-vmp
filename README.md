@@ -74,7 +74,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [tfe_policy_set.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
-| [tfe_policy_set.vmp_vcs_module_validation](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
+| [tfe_policy_set.vmp_vcs_storage_validation](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
 | [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
