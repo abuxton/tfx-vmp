@@ -56,12 +56,14 @@ Once the resources are destroyed you can run a Terraform client based destroy us
 
 | Name | Version |
 |------|---------|
+| <a name="requirement_environment"></a> [environment](#requirement\_environment) | 1.3.3 |
 | <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | 0.38.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
+| <a name="provider_environment"></a> [environment](#provider\_environment) | 1.3.3 |
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.38.0 |
 | <a name="provider_tfe.organization"></a> [tfe.organization](#provider\_tfe.organization) | 0.38.0 |
 
@@ -78,6 +80,8 @@ No modules.
 | [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
+| [environment_variables.ATLAS](https://registry.terraform.io/providers/EppO/environment/1.3.3/docs/data-sources/variables) | data source |
+| [environment_variables.all](https://registry.terraform.io/providers/EppO/environment/1.3.3/docs/data-sources/variables) | data source |
 | [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
 | [tfe_slug.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/slug) | data source |
 
@@ -85,7 +89,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (Optional String) Token for the Terraform server organization level token | `string` | n/a | yes |
 | <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | (Optional Bool) Flag to control deployment of policy sets. | `bool` | `false` | no |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required String) Name of OAuth VCS connection you created | `string` | n/a | yes |

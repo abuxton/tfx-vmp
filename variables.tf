@@ -1,8 +1,4 @@
-variable "ATLAS_WORKSPACE_SLUG" {
-  type        = string
-  default     = ""
-  description = "(Unrequired) The TF_VAR_ATLAS_WORKSPACE_SLUG is a varible within the workspace of the terraform service"
-}
+
 variable "oauth_name" {
   type        = string
   description = "(Required String) Name of OAuth VCS connection you created"
