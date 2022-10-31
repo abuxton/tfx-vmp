@@ -73,14 +73,17 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_organization_token.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/organization_token) | resource |
 | [tfe_team.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_team_token.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_token) | resource |
+| [tfe_variable.oauth_name](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
 | [tfe_variable.tfe_token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
+| [tfe_variable.tfx_org_token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
 | [tfe_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable_set) | resource |
 | [tfe_workspace.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
 | [tfe_workspace_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace_variable_set) | resource |
-| [tfe_oauth_client.clients](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
+| [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
 
 ## Inputs
 

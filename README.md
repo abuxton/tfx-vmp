@@ -49,6 +49,7 @@ Once the resources are destroyed you can run a Terraform client based destroy us
 | Name | Version |
 |------|---------|
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.38.0 |
+| <a name="provider_tfe.organization"></a> [tfe.organization](#provider\_tfe.organization) | 0.38.0 |
 
 ## Modules
 
@@ -58,14 +59,17 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
+| [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
+| [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
+| [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
+| <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (optional) Token for the Terraform server organization level token | `string` | n/a | yes |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required) Name of OAuth VCS connection you created | `string` | n/a | yes |
-| <a name="input_organization"></a> [organization](#input\_organization) | (Required) Organization name | `string` | n/a | yes |
 | <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
 
 ## Outputs
