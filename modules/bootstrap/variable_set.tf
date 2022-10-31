@@ -36,3 +36,32 @@ resource "tfe_variable" "oauth_name" {
   variable_set_id = tfe_variable_set.this.id
 }
 
+
+resource "tfe_variable" "sentinel_branch" {
+  count    = var.sentinel_branch != "" ? 1 : 0
+  key      = "sentinel_branch"
+  value    = var.sentinel_branch
+  category = "terraform"
+  #sensitive       = true
+  description     = "Sentinel_branch for vcs sourced policy_set"
+  variable_set_id = tfe_variable_set.this.id
+}
+resource "tfe_variable" "configure_policy_set" {
+  count    = var.configure_policy_set != false ? 1 : 0
+  key      = "configure_policy_set"
+  value    = var.configure_policy_set
+  category = "terraform"
+  #sensitive       = true
+  description     = "Boolean to configure policy_set"
+  variable_set_id = tfe_variable_set.this.id
+}
+resource "tfe_variable" "sentinel_vcs_repo_identifier" {
+  count    = var.sentinel_vcs_repo_identifier != "" ? 1 : 0
+  key      = "sentinel_vcs_repo_identifier"
+  value    = var.sentinel_vcs_repo_identifier
+  category = "terraform"
+  #sensitive       = true
+  description     = "Sentinel VCS repo identifier to configure policy_set VCS source"
+  variable_set_id = tfe_variable_set.this.id
+}
+

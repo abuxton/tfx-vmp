@@ -12,6 +12,8 @@ Access to the TFC || TFE platform with an organization <https://developer.hashic
 
 The terraform client installed locally <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli>
 
+A git fork or clone of this repository in a publicly source-able project.
+
 ### Bootstrapping
 
 Before you can connect a Version Control Service (VCS) based workflow you need a VCS connection in TFC/TFE. <https://developer.hashicorp.com/terraform/enterprise/vcs>
@@ -28,7 +30,19 @@ This project is to facilitate a demonstration of terraform service capabilities 
 
 The examples follow the learnings from <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices>
 
-# Destroy and Destruction
+### Policy Sets (Sentinel) Deployment
+
+The example includes dynamic resources for deploying `policy_set` resources.
+
+The variable `configure_policy_set` will deploy the initial generic policy set <./policy_sets/generic/sentinel.hcl>
+
+Additionally configuring `sentinel_vcs_repo_identifier=<git organization>/<git project>` or `sentinel_vcs_repo_identifier = $(git config  --get remote.origin.url | cut -d : -f2 | cut -d'.' -f1)` will then deploy the <./policy_sets/storage_validation/sentinel.hcl> from this repository has source.
+
+These variable should be set in the Terraform service UI (TFC/TFE) <https://developer.hashicorp.com/terraform/cloud-docs/workspaces/variables/managing-variables>
+
+**NOTE: The policies referenced are only available over a pubic HTTPS endpoint**
+
+## Destroy and Destruction
 
 The resources listed below are created as part of a standard Version Control Service (VCS) driven workflow during the bootstrapping process.
 
@@ -49,6 +63,7 @@ Once the resources are destroyed you can run a Terraform client based destroy us
 | Name | Version |
 |------|---------|
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.38.0 |
+| <a name="provider_tfe.organization"></a> [tfe.organization](#provider\_tfe.organization) | 0.38.0 |
 
 ## Modules
 
@@ -58,15 +73,25 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_policy_set.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
+| [tfe_policy_set.vmp_vcs_storage_validation](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
+| [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
+| [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
+| [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
 | [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
+| [tfe_slug.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/slug) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required) Name of OAuth VCS connection you created | `string` | n/a | yes |
-| <a name="input_organization"></a> [organization](#input\_organization) | (Required) Organization name | `string` | n/a | yes |
-| <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
+| <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
+| <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (Optional String) Token for the Terraform server organization level token | `string` | n/a | yes |
+| <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | (Optional Bool) Flag to control deployment of policy sets. | `bool` | `false` | no |
+| <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required String) Name of OAuth VCS connection you created | `string` | n/a | yes |
+| <a name="input_sentinel_branch"></a> [sentinel\_branch](#input\_sentinel\_branch) | (Optional String) VCS repo branch defaults to main | `string` | `"main"` | no |
+| <a name="input_sentinel_vcs_repo_identifier"></a> [sentinel\_vcs\_repo\_identifier](#input\_sentinel\_vcs\_repo\_identifier) | (Optional String) username/projectname of the VCS project or repository to source policy sets | `string` | `""` | no |
+| <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional String) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
 
 ## Outputs
 

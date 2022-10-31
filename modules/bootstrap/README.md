@@ -73,23 +73,27 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_organization_token.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/organization_token) | resource |
 | [tfe_team.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_team_token.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_token) | resource |
+| [tfe_variable.oauth_name](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
 | [tfe_variable.tfe_token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
+| [tfe_variable.tfx_org_token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable) | resource |
 | [tfe_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/variable_set) | resource |
 | [tfe_workspace.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
 | [tfe_workspace_variable_set.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace_variable_set) | resource |
-| [tfe_oauth_client.clients](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
+| [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required) Name of OAuth VCS connection you created | `string` | n/a | yes |
-| <a name="input_organization"></a> [organization](#input\_organization) | (Required) Organization name | `string` | n/a | yes |
-| <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
-| <a name="input_vcs_repo_identifier"></a> [vcs\_repo\_identifier](#input\_vcs\_repo\_identifier) | (Required) username/projectname of the VCS project or repository | `string` | n/a | yes |
+| <a name="input_branch"></a> [branch](#input\_branch) | (Optional String) Branch to deploy VCS source. | `string` | `"main"` | no |
+| <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required String) Name of OAuth VCS connection you created | `string` | n/a | yes |
+| <a name="input_organization"></a> [organization](#input\_organization) | (Required String) Organization name | `string` | n/a | yes |
+| <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional String) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
+| <a name="input_vcs_repo_identifier"></a> [vcs\_repo\_identifier](#input\_vcs\_repo\_identifier) | (Required String) username/projectname of the VCS project or repository | `string` | n/a | yes |
 
 ## Outputs
 
