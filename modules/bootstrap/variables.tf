@@ -15,3 +15,7 @@ variable "terraform_server" {
   description = "(Optional) defaults to app.terraform.io, but otherwise the FQDN of your TFE server"
   default     = "app.terraform.io"
 }
+variable "branch" {
+  type    = string
+  default = "main"
+}

@@ -1,3 +1,4 @@
+branch              = "main"
 oauth_name          = null
 organization        = null
 terraform_server    = "app.terraform.io"
