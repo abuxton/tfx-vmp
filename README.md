@@ -59,9 +59,13 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_policy_set.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
+| [tfe_policy_set.vmp_vcs_module_validation](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
 | [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
+| [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
+| [tfe_slug.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/slug) | data source |
 
 ## Inputs
 
@@ -70,6 +74,8 @@ No modules.
 | <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (optional) Token for the Terraform server organization level token | `string` | n/a | yes |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required) Name of OAuth VCS connection you created | `string` | n/a | yes |
+| <a name="input_sentinel_branch"></a> [sentinel\_branch](#input\_sentinel\_branch) | n/a | `string` | `"main"` | no |
+| <a name="input_sentinel_vcs_repo_identifier"></a> [sentinel\_vcs\_repo\_identifier](#input\_sentinel\_vcs\_repo\_identifier) | (Required) username/projectname of the VCS project or repository | `string` | `""` | no |
 | <a name="input_terraform_server"></a> [terraform\_server](#input\_terraform\_server) | (Optional) defaults to app.terraform.io, but otherwise the FQDN of your TFE server | `string` | `"app.terraform.io"` | no |
 
 ## Outputs

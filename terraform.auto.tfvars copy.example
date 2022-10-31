@@ -1,0 +1,6 @@
+ATLAS_WORKSPACE_SLUG         = ""
+TFx_org_token                = null
+oauth_name                   = null
+sentinel_branch              = "main"
+sentinel_vcs_repo_identifier = ""
+terraform_server             = "app.terraform.io"

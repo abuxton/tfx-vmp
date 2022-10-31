@@ -21,3 +21,12 @@ variable "TFx_org_token" {
   description = "(optional) Token for the Terraform server organization level token"
 }
 
+variable "sentinel_vcs_repo_identifier" {
+  type        = string
+  description = "(Required) username/projectname of the VCS project or repository"
+  default     = "" # used as count flag
+}
+variable "sentinel_branch" {
+  type    = string
+  default = "main"
+}
