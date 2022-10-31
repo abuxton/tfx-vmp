@@ -1,1 +1,1 @@
-main = rule { false }
+main = rule { true }
