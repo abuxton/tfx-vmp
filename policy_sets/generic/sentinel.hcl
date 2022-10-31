@@ -18,8 +18,10 @@ module "tfrun-functions" {
     source = "https://github.com/hashicorp/terraform-sentinel-policies/blob/main/common-functions/tfrun-functions/tfrun-functions.sentinel"
 }
 
-policy "validate-variables-have-descriptions" {
-    source = "https://github.com/hashicorp/terraform-sentinel-policies/blob/main/cloud-agnostic/validate-variables-have-descriptions.sentinel"
+policy "generic" {
+    source = "./policy.sentinel"
     enforcement_level = "advisory"
+	#enforcement_level = "soft-manditory"
+	#enforcement_level = "hard-manditory"
 }
 
