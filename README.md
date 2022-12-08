@@ -73,6 +73,8 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [tfe_agent_pool.test-agent-pool](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/agent_pool) | resource |
+| [tfe_agent_token.test-agent-token](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/agent_token) | resource |
 | [tfe_policy_set.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
 | [tfe_policy_set.vmp_vcs_storage_validation](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/policy_set) | resource |
 | [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
@@ -87,6 +89,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (Optional String) Token for the Terraform server organization level token | `string` | n/a | yes |
+| <a name="input_agent_pool_set"></a> [agent\_pool\_set](#input\_agent\_pool\_set) | (Optional Bool) Flag to control of agent pool | `bool` | `false` | no |
 | <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | (Optional Bool) Flag to control deployment of policy sets. | `bool` | `false` | no |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required String) Name of OAuth VCS connection you created | `string` | n/a | yes |
 | <a name="input_sentinel_branch"></a> [sentinel\_branch](#input\_sentinel\_branch) | (Optional String) VCS repo branch defaults to main | `string` | `"main"` | no |
@@ -95,5 +98,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_test-agent-token"></a> [test-agent-token](#output\_test-agent-token) | n/a |
 <!-- END_TF_DOCS -->
