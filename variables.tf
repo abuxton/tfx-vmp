@@ -33,3 +33,9 @@ variable "configure_policy_set" {
   type        = bool
   description = "(Optional Bool) Flag to control deployment of policy sets."
 }
+
+variable "agent_pool_set" {
+  default     = false
+  type        = bool
+  description = "(Optional Bool) Flag to control of agent pool"
+}
