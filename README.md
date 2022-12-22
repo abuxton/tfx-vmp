@@ -30,6 +30,10 @@ This project is to facilitate a demonstration of terraform service capabilities 
 
 The examples follow the learnings from <https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices>
 
+### Examples
+
+Due to the nature of this project the [Examples](./examples/README.md) folder contains declarative examples, and some examples for additional usage or illustration.
+
 ### Policy Sets (Sentinel) Deployment
 
 The example includes dynamic resources for deploying `policy_set` resources.
