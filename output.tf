@@ -5,3 +5,6 @@
 output "environment_variables_all" {
   value = data.environment_variables.all.items
 }
+output "atlas_workspace_slug" {
+  value = data.environment_variables.atlas_slug
+}
