@@ -60,12 +60,16 @@ Once the resources are destroyed you can run a Terraform client based destroy us
 
 | Name | Version |
 |------|---------|
+| <a name="requirement_environment"></a> [environment](#requirement\_environment) | 1.3.3 |
+| <a name="requirement_http"></a> [http](#requirement\_http) | 3.2.1 |
 | <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | 0.38.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
+| <a name="provider_environment"></a> [environment](#provider\_environment) | 1.3.3 |
+| <a name="provider_http"></a> [http](#provider\_http) | 3.2.1 |
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | 0.38.0 |
 | <a name="provider_tfe.organization"></a> [tfe.organization](#provider\_tfe.organization) | 0.38.0 |
 
@@ -84,6 +88,9 @@ No modules.
 | [tfe_team.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team) | resource |
 | [tfe_team_access.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/team_access) | resource |
 | [tfe_workspace.component-env](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/resources/workspace) | resource |
+| [environment_variables.all](https://registry.terraform.io/providers/EppO/environment/1.3.3/docs/data-sources/variables) | data source |
+| [environment_variables.atlas_slug](https://registry.terraform.io/providers/EppO/environment/1.3.3/docs/data-sources/variables) | data source |
+| [http_http.tfc_audit_trail](https://registry.terraform.io/providers/hashicorp/http/3.2.1/docs/data-sources/http) | data source |
 | [tfe_oauth_client.this](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/oauth_client) | data source |
 | [tfe_slug.generic](https://registry.terraform.io/providers/hashicorp/tfe/0.38.0/docs/data-sources/slug) | data source |
 
@@ -91,7 +98,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ATLAS_WORKSPACE_SLUG"></a> [ATLAS\_WORKSPACE\_SLUG](#input\_ATLAS\_WORKSPACE\_SLUG) | (Unrequired) The TF\_VAR\_ATLAS\_WORKSPACE\_SLUG is a varible within the workspace of the terraform service | `string` | `""` | no |
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (Optional String) Token for the Terraform server organization level token | `string` | n/a | yes |
 | <a name="input_agent_pool_set"></a> [agent\_pool\_set](#input\_agent\_pool\_set) | (Optional Bool) Flag to control of agent pool | `bool` | `false` | no |
 | <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | (Optional Bool) Flag to control deployment of policy sets. | `bool` | `false` | no |
@@ -104,5 +110,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_atlas_workspace_slug"></a> [atlas\_workspace\_slug](#output\_atlas\_workspace\_slug) | n/a |
+| <a name="output_environment_variables_all"></a> [environment\_variables\_all](#output\_environment\_variables\_all) | n/a |
 | <a name="output_test-agent-token"></a> [test-agent-token](#output\_test-agent-token) | n/a |
+| <a name="output_tfc_audit_trail"></a> [tfc\_audit\_trail](#output\_tfc\_audit\_trail) | n/a |
 <!-- END_TF_DOCS -->

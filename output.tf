@@ -8,3 +8,7 @@ output "environment_variables_all" {
 output "atlas_workspace_slug" {
   value = data.environment_variables.atlas_slug
 }
+
+output "tfc_audit_trail" {
+  value = data.http.tfc_audit_trail
+}
