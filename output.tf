@@ -12,3 +12,6 @@ output "atlas_workspace_slug" {
 output "tfc_audit_trail" {
   value = data.http.tfc_audit_trail
 }
+output "audit_timestamp" {
+  value = local.audit_timestamp
+}
