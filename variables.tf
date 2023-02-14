@@ -39,5 +39,5 @@ variable "agent_pool_set" {
 variable "audit_timestamp" {
   default     = ""
   type        = string
-  description = "(Optional String) enter the date in timestamp format 'yyyy-mm-ddT00:00:00Z', the default is timestamp() -10s"
+  description = "(Optional String) enter the date in timestamp format 'yyyy-mm-ddT00:00:00Z', the default is timestamp() -1m"
 }
