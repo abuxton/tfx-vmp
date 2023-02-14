@@ -10,8 +10,8 @@ output "atlas_workspace_slug" {
 }
 
 output "tfc_audit_trail" {
-  value = data.http.tfc_audit_trail
+  value = data.http.tfc_audit_trail.response_body
 }
-output "audit_timestamp" {
-  value = local.audit_timestamp
-}
+# output "audit_timestamp" {
+#   value = local.audit_timestamp
+# }
