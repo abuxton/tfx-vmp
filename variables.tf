@@ -35,3 +35,9 @@ variable "agent_pool_set" {
   type        = bool
   description = "(Optional Bool) Flag to control of agent pool"
 }
+
+variable "audit_date" {
+  default     = "2023-01-01T00:00:00Z"
+  type        = string
+  description = "(Optional String) enter the date in timestampe format 'yyyy-mm-ddT00:00:00Z' "
+}
