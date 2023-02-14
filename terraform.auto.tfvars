@@ -5,4 +5,3 @@ oauth_name                   = null
 sentinel_branch              = "main"
 sentinel_vcs_repo_identifier = ""
 terraform_server             = "app.terraform.io"
-audit_date                   = "2023-02-14T00:00:00Z"
