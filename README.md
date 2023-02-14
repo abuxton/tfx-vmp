@@ -100,7 +100,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_TFx_org_token"></a> [TFx\_org\_token](#input\_TFx\_org\_token) | (Optional String) Token for the Terraform server organization level token | `string` | n/a | yes |
 | <a name="input_agent_pool_set"></a> [agent\_pool\_set](#input\_agent\_pool\_set) | (Optional Bool) Flag to control of agent pool | `bool` | `false` | no |
-| <a name="input_audit_date"></a> [audit\_date](#input\_audit\_date) | (Optional String) enter the date in timestampe format 'yyyy-mm-ddT00:00:00Z' | `string` | `"2023-01-01T00:00:00Z"` | no |
+| <a name="input_audit_timestamp"></a> [audit\_timestamp](#input\_audit\_timestamp) | (Optional String) enter the date in timestampe format 'yyyy-mm-ddT00:00:00Z' | `string` | `""` | no |
 | <a name="input_configure_policy_set"></a> [configure\_policy\_set](#input\_configure\_policy\_set) | (Optional Bool) Flag to control deployment of policy sets. | `bool` | `false` | no |
 | <a name="input_oauth_name"></a> [oauth\_name](#input\_oauth\_name) | (Required String) Name of OAuth VCS connection you created | `string` | n/a | yes |
 | <a name="input_sentinel_branch"></a> [sentinel\_branch](#input\_sentinel\_branch) | (Optional String) VCS repo branch defaults to main | `string` | `"main"` | no |
