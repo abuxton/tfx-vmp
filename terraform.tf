@@ -8,9 +8,10 @@ terraform {
   # }
 
   required_providers {
+    terraform = "~> 1.3.0"
     tfe = {
       source  = "hashicorp/tfe"
-      version = "0.38.0"
+      version = "0.42.0"
     }
     environment = {
       source  = "EppO/environment"

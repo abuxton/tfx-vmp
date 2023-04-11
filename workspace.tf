@@ -1,8 +1,21 @@
-resource "tfe_workspace" "component-env" {
-  name           = "component-env"
+
+
+module "workspacer" {
+  source         = "alexbasista/workspacer/tfe"
+  version        = "0.8.0"
   organization   = local.organization
+  workspace_name = "component-env"
+  workspace_desc = "Description of my new Workspace."
+  workspace_tags = ["component", "vmp", "environment"]
   execution_mode = "local"
-  tag_names      = ["component", "vmp", "environment"]
+  tfvars = {
+    teststring = "iamstring"
+    testlist   = ["1", "2", "3"]
+    testmap    = { "a" = "1", "b" = "2", "c" = "3" }
+    /* team_access = {
+    "dev-team"     = "read"
+    "release-team" = "write"
+    "ops-team"     = "admin" 
+  }*/
+  }
 }
-
-

@@ -11,7 +11,7 @@ resource "tfe_team" "component-env" {
 resource "tfe_team_access" "component-env" {
   access       = "read"
   team_id      = tfe_team.component-env.id
-  workspace_id = tfe_workspace.component-env.id
+  workspace_id = module.workspacer.workspace_id
 }
 
 # resource "tfe_team_token" "component-env" {
