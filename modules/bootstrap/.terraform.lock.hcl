@@ -6,6 +6,7 @@ provider "registry.terraform.io/eppo/environment" {
   constraints = "1.3.3"
   hashes = [
     "h1:C3NbHa2yqsl8Uvn7fX4uSGKcZcUAoczYBFKQ9axW5wg=",
+    "h1:nu2QJaC+9wgvpyr/6sxlPDzjqGZUZ8C61s7uAtlFDIM=",
     "zh:054461b645416fee1c6e2997d13c68cd0d2ca5097b0c68630c5df96f2908787f",
     "zh:112e8ebbaf09fbf4d3718a481848c856b87ce33c0f70ffeb26330bc8781a231d",
     "zh:30c3f981366338d7fee96507075bc3a6e7585eadc890a9a0c74c3fca28926343",
@@ -28,6 +29,7 @@ provider "registry.terraform.io/hashicorp/tfe" {
   constraints = "0.38.0"
   hashes = [
     "h1:CiC0EBdUcQraDIuKOW0dy1gmM4pf/CeF1y7jXjv5vtQ=",
+    "h1:xmJsBuA1IiLmIKiGJsxnUZHpkWMEQZ/sYtLg2OTLAZI=",
     "zh:25b636286478ecd31f3120e5cdb9ba2a19e4dfa88cd635443ee6b36d8e4d8a4b",
     "zh:298c954e59df3b663a639affaf25938b3ad3d8dc77a6c41bc720bf9acd0d6752",
     "zh:32c62580ec1f249aee0beab40871b48fdcf3ecec4ffb759b8694910ab35322ad",

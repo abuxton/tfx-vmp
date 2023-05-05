@@ -2,7 +2,7 @@
 # git commit -m "bar" --no-verify #skip all
 repos:
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.17 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    rev: v0.1.21 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
       - id: terraform-fmt
       - id: terraform-validate
@@ -11,7 +11,7 @@ repos:
 #      - id: gofmt
 #      - id: golint
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+    rev: v4.4.0 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -66,6 +66,6 @@ repos:
 #        # optional custom config:
 #        args: [--json, --verbose, --dockerfile]
   - repo: https://github.com/tcort/markdown-link-check
-    rev: ""
+    rev: "v3.11.2"
     hooks:
       - id: markdown-link-check

@@ -1,0 +1,143 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 27 Apr 2023 10:00:43 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Vary: Accept, Origin
+X-RateLimit-Limit: 30
+X-RateLimit-Remaining: 29
+X-RateLimit-Reset: 0.756
+ETag: W/"05a556aa19216a842cd8f34fe2b44664"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _atlas_session_data=d1ZYaCs3NHlPZzZUVHQzeE1qcEVDRmdDMjBiMjlKSlVxYmdReHI2cmYrakZMbzMzWHI1MFdCV1BDcWpib2Vxazd2bDQxNE5SLzBiRVV4RUllQUtHUDdYZWpxQVV1SUN2R2t3Q1BtdjdIVHM0ZTdnZTBOM3M0L1lFcHVmeVN6aEY3WWJ0NUVSQTRBWHRwODUvSGJ0aHpRUCt4cDIyOUM4OVFwbEF5WEVnRzBrcmVDWDVoMTUwdjhIYVBKSFgwUVFGQkFmZUdpakIxNXE4U1JhcUhNRFZIaXpseDBnUWUrOXE1cnFBQzM5elE3OXdkZWtjTHhkamIwVVJHMmZJZGtmUXp2dEJaSXd6emF5RmZOQzQ2SVhHK2NsMC9OblFvL3kxUERoNXF0YSs2T1U9LS1KQ0gzZUsvNEw1Wm93RlQwTFpxZmxnPT0%3D--c3fe5ef0a5a4b8adad2da72528ec87e4ac701924; path=/; expires=Sat, 27 May 2023 10:00:43 GMT; secure; HttpOnly
+X-Request-Id: 96ec3efa-475d-4cbd-86a8-ebeedbc2b248
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terraform Enterprise by HashiCorp</title>
+
+  <link rel="stylesheet" media="all" href="/assets/v2-9b48cea06df430645da00cea6f6ab176569e5f37e9e13f7d10b1d2a77288ef18.css" />
+  <script src="/assets/application-c2c7f5a4ea5169eace79cafc4852346ff7045c9ccee340014292e07411cd21d8.js"></script>
+
+
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Kfg6AyHKnX4VkHFVi4MipZUmMuSzgnV+IKA+gnMId/aOqNNy/wqLrtNygrkdWffP8ubmhrIoRZFyY2KSbkL8Fg==" />
+</head>
+<body class="session">
+  <div class="v2-wrapper">
+
+    <div>
+
+
+  <div class="columns is-centered is-vcentered">
+  <div class="column is-full-mobile is-full-medium ">
+    <section class="section">
+      <h2 class="title is-size-5 has-centered-text">WARNING: SAML debugging is enabled</h2>
+
+
+    </section>
+  </div>
+</div>
+
+
+<div class="columns is-centered is-vcentered">
+  <div class="column is-full-mobile is-fixed-medium">
+
+    <section class="section">
+
+        <div class="box session-box session-box-top">
+    <img style="height: 48px;" src="/assets/terraform-enterprise-logo-ad3d2e9271a13eaf31e826b5d8e24bef94b07d257306a710d53ebaec0290047a.svg" alt="Terraform Enterprise">
+  </div>
+
+
+      <div class="box session-box session-box-bottom">
+        <h2 class="session-title is-size-5">Sign in to Terraform Enterprise</h2>
+
+
+
+
+          <div id="saml-login" class="enterprise-form">
+            <div>
+              <p class="has-margin-bottom-sm">SAML is enabled for your organization</p>
+              <a class="button is-success is-fullwidth" href="/users/saml/sign_in">Log in via SAML</a>
+            </div>
+            <div class="or-login">
+              <a href="#" class="or-login-btn">Or login with username and password</a>
+            </div>
+
+            <div class="saml-enterprise-form">
+
+<form class="new_user" id="new_user" action="/session" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="B4m+NW67RliUgp9x3SOq6QnT3pdSIlgIVDt42F8q5sqg2VdEsHtQiFJgbJ1L+X+DbhMK9VOIaOcG+CTIQmBtKg==" autocomplete="off" />
+  <div class="field">
+    <label class="label" for="user_login">Username or email</label>
+    <input autofocus="autofocus" class="input" type="text" name="user[login]" id="user_login" />
+  </div>
+
+  <div class="field">
+    <label class="label" for="user_password">Password</label>
+    <input class="input" autocomplete="off" type="password" name="user[password]" id="user_password" />
+    <div class="help">
+      <a href="/auth/new">Forgot password?</a>
+    </div>
+  </div>
+
+  <div class="field">
+    <input type="submit" name="commit" value="Sign in" class="button is-fullwidth is-primary g-recaptcha" data-callback="onSubmitRecaptchaedLoginForm" data-action="login" data-disable-with="Sign in" />
+  </div>
+</form>
+<script>
+  function onSubmitRecaptchaedLoginForm(token) {
+    document.getElementById("new_user").submit();
+  }
+</script>
+
+              <p class="help">
+                Only admin users can log in using username and password while SAML is enabled.
+              </p>
+            </div>
+          </div>
+
+      </div>
+
+      <div>
+
+
+      </div>
+
+
+    </section>
+
+  </div>
+</div>
+
+    </div>
+    <footer class="footer has-text-centered" id="footer">
+
+      <nav class="footer-content is-inline-flex-tablet">
+        <div class="icon is-inline-block">
+          <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="is-svg has-fill-black">
+  <path d="M10 .5L1 5.794v12.715L4.381 20.5V7.784L10 4.477z"></path>
+  <path d="M13.735.5v9.993h-3.47v-3.73L7 8.728V21.53l3.265 1.969v-9.965h3.47v3.705L17 15.276V2.464z"></path>
+  <path d="M14 23.5l9-5.294V5.491L19.619 3.5v12.716L14 19.523z"></path>
+</svg>
+        </div>
+        <p>&copy; 2023 HashiCorp, Inc.</p>
+          <p>
+            <span class="tag is-light is-lowercase">v202302-1</span>
+          </p>
+      </nav>
+    </footer>
+
+
+  </div>
+</body>
+</html>
