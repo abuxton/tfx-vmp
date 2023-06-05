@@ -2,6 +2,7 @@ data "tfe_oauth_client" "this" {
   name         = var.oauth_name
   organization = local.organization
   provider     = tfe.organization
+
 }
 data "tfe_slug" "generic" {
   count = var.configure_policy_set != false ? 1 : 0
@@ -36,4 +37,3 @@ resource "tfe_policy_set" "vmp_vcs_storage_validation" {
     oauth_token_id     = data.tfe_oauth_client.this.oauth_token_id
   }
 }
-
