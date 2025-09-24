@@ -1,10 +1,5 @@
 # tfc-vmp
 
-
-
-
-help! remove later
-
 It's assumed you have access to a Terraform service platform such as Terraform Enterprise (TFE) or Terraform Cloud(TFC).
 
 Vending Machine Pattern (VMP) for creating an organisation, workspaces, and teams on a Terraform service platform (TFC/TFE)
