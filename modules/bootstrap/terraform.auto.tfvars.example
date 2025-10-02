@@ -1,7 +1,7 @@
 branch                       = "main"
 configure_policy_set         = false
 oauth_name                   = "vmp-github"
-organization                 = ""
+organization                 = "abc-vmp"
 sentinel_branch              = "main"
 sentinel_vcs_repo_identifier = ""
 terraform_server             = "app.terraform.io"

@@ -1,4 +1,8 @@
 
+import {
+  to = tfe_variable_set.this
+  id = "varset-41n6y3m3Mm8CjGQk"
+}
 resource "tfe_variable_set" "this" {
   name         = "vmp variable set"
   description  = "example variable set for VMP"
@@ -10,6 +14,7 @@ resource "tfe_workspace_variable_set" "this" {
   variable_set_id = tfe_variable_set.this.id
 }
 
+
 resource "tfe_variable" "tfe_token" {
   key      = "TFE_TOKEN"
   value    = tfe_team_token.this.token
@@ -18,6 +23,7 @@ resource "tfe_variable" "tfe_token" {
   description     = "TFE token for deploying tfe provider resources"
   variable_set_id = tfe_variable_set.this.id
 }
+
 
 resource "tfe_variable" "tfx_org_token" {
   key      = "TFx_org_token"

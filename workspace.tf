@@ -2,7 +2,7 @@
 
 module "workspacer" {
   source         = "alexbasista/workspacer/tfe"
-  version        = "0.8.0"
+  version        = "0.13.0"
   organization   = local.organization
   workspace_name = "component-env"
   workspace_desc = "Description of my new Workspace."
@@ -15,7 +15,7 @@ module "workspacer" {
     /* team_access = {
     "dev-team"     = "read"
     "release-team" = "write"
-    "ops-team"     = "admin" 
+    "ops-team"     = "admin"
   }*/
   }
 }
