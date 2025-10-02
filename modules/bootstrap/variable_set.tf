@@ -1,8 +1,8 @@
 
-import {
-  to = tfe_variable_set.this
-  id = "varset-41n6y3m3Mm8CjGQk"
-}
+#import {
+#  to = tfe_variable_set.this
+#  id = "varset-41n6y3m3Mm8CjGQk"
+#}
 resource "tfe_variable_set" "this" {
   name         = "vmp variable set"
   description  = "example variable set for VMP"

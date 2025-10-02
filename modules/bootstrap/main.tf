@@ -3,10 +3,10 @@ data "tfe_oauth_client" "this" {
   organization = var.organization
 }
 
-import {
-  to = tfe_workspace.this
-  id = "abc-vmp/vmp_workspace"
-}
+# import {
+#   to = tfe_workspace.this
+#   id = "abc-vmp/vmp_workspace"
+# }
 
 resource "tfe_workspace" "this" {
   name         = "vmp_workspace"

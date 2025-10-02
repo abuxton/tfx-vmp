@@ -1,7 +1,7 @@
-import {
-  to = tfe_team.this
-  id = "abc-vmp/vmp_service_team"
-}
+# import {
+#   to = tfe_team.this
+#   id = "abc-vmp/vmp_service_team"
+# }
 resource "tfe_team" "this" {
   name         = "vmp_service_team"
   organization = var.organization
