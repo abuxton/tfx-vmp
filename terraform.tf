@@ -11,15 +11,15 @@ terraform {
 
     tfe = {
       source  = "hashicorp/tfe"
-      version = "0.42.0"
+      version = "~> 0.70.0"
     }
     environment = {
       source  = "EppO/environment"
-      version = "1.3.3"
+      version = "~> 1.3"
     }
     http = {
       source  = "hashicorp/http"
-      version = "3.2.1"
+      version = "~>3.5.0"
     }
   }
 }
