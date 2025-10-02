@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "terraform": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "${input:tfe_token}",
+        "-e", "${input:tfe_address}",
+        "hashicorp/terraform-mcp-server:0.3.0"
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "tfe_token",
+      "description": "Terraform API Token",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "tfe_address",
+      "description": "Terraform Address",
+      "password": false,
+			"default": "https://app.terraform.io"
+    }
+  ]
+}
