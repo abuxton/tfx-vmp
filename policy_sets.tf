@@ -22,7 +22,7 @@ resource "tfe_policy_set" "generic" {
 }
 
 resource "tfe_policy_set" "vmp_vcs_storage_validation" {
-  count = var.configure_policy_set != false && var.sentinel_vcs_repo_identifier != "" ? 1 : 0
+  count = var.configure_policy_set != false ? 1 : 0
 
   name          = "vmp_initial_policy_set"
   description   = "A vmp pattern deployed policy set"
