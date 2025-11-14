@@ -6,7 +6,7 @@ terraform {
       name = "vmp_workspace"
     }
   }
-  required_version = "~> 1.13"
+  required_version = "~> 1.12"
   required_providers {
 
     tfe = {
